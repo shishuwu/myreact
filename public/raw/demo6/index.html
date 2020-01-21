@@ -13,8 +13,13 @@
     <div id="example"></div>
     <script type="text/babel">
 
-        var title = 1412341234;
+        // var title = 1412341234;
+        var title = "string title"
         class MyTitle extends React.Component {
+            static propTypes = {
+                title: PropTypes.string.isRequired,
+            }
+
             render() {
                 return <h1>The title is: {this.props.title}</h1>;
             }
